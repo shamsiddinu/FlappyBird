@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Flappy Bird clone made with vanilla JavaScript">
+  <title>Flappy Bird</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="game">
+    <div class="sky">
+      <h1 class="score">0</h1>
+      <div class="bird">
+        <img id="birdImg" src="Images/Yellow/wing-up.png" width="716" height="632" alt="Yellow bird">
+      </div>
+    </div>
+    <div class="ground"></div>
+    <div class="obstacleContainer"></div>
+    <div class="obstacleContainer2"></div>
+    <div class="gameOver">
+      <div class="gameOverBox">
+        <p class="gameOverScore">Score: </p>
+        <p class="hiscore">Best Score: 0</p>
+        <p class="restartMessage">Press Space to restart</p>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Alfa Slab One', sans-serif;
+}
+
+.githubLink {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 100;
+}
+
+.githubLink > img {
+  opacity: 0.3;
+  width: 30px;
+  height: 30px;
+  transition: all .5s ease;
+}
+
+.githubLink:hover > img {
+  opacity: 1;
+}
+
+body {
+  width: 100vw;
+  height: calc(var(--vh, 1vh) * 100);
+  display: grid;
+  place-content: center;
+  overflow: hidden;
+  background: rgb(45, 44, 61);
+}
+
+.game {
+  width: 480px;
+  height: 640px;
+  border: 1px solid rgb(0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+.sky {
+  width: 100%;
+  height: 80%;
+  background-image: url("Images/sky1.png");
+  background-size: cover;
+  position: relative;
+}
+
+.ground {
+  background: rgb(151, 75, 21);
+  width: 100%;
+  height: 20%;
+  border-top: 3px solid black
+}
+
+.bird {
+  width: 45px;
+  height: 30px;
+  display: inline-block;
+  position: absolute;
+  left: 32%;
+  top: 40%;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bird img{
+  width: 110%;
+  height: auto;
+  user-select: none;
+}
+
+.score {
+  position: relative;
+  font-size: 3rem;
+  font-weight: 400;
+  padding-top: .5em;
+  text-align: center;
+  z-index: 10;
+  user-select: none;
+}
+
+.obstacleContainer {
+  display: flex;
+  min-height: 300px;
+  height: 40%;
+  align-items: flex-end;
+  min-width: 10px;
+  width: fit-content;
+  position: absolute;
+  left: 100%;
+}
+
+.obstacleContainer2 {
+  position: relative;
+  left: 100%;
+  min-width: 10px;
+  display: flex;
+  height: 40%;
+  min-height: 300px;
+  align-items: flex-start;
+  width: fit-content;
+  top: -100%;
+}
+
+.obstacle {
+  width: 70px;
+  background: mediumseagreen;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  border-top: 3px solid black;
+  height: 100px;
+  position: relative;
+}
+
+.obstacle2 {
+  border-bottom: 3px solid black;
+  border-top: none;
+}
+
+.gameOver {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.gameOverBox {
+  width: 70%;
+  max-width: 250px;
+  height: 160px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  border: 3px solid black;
+  user-select: none;
+}
+
+.restartMessage {
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .game {
+    width: 100vw;
+    height: calc(var(--vh, 1vh) * 100);
+    border: none;
+  }
+
+  .sky {
+    height: 90%;
+  }
+  
+  .ground {
+    height: 10%;
+  }
+}
